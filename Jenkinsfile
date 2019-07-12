@@ -1,6 +1,6 @@
 Jenkinsfile
 pipeline {
-  agent
+  agent any
   stages {
     stage ('Clean And Test') {
       steps {
