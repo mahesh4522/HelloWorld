@@ -13,7 +13,6 @@ pipeline {
   	stages {
     stage('Clean, Edit version and Test') { 
             steps {
-            	sh "mvn clean"
                 sh "sed -i 's/VERSION/${params.version}/' pom.xml"
                 sh "mvn test -f HelloWorld"
             }
