@@ -8,6 +8,7 @@
 		<version>1.5.21.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>com.main</groupId>
 	<artifactId>HelloWorld</artifactId>
 	<!-- <version>${version}-SNAPSHOT</version> -->
