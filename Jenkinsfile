@@ -16,6 +16,7 @@ pipeline {
   	stages {
     stage('Clean, Edit version and Test') { 
             steps {
+            	sh "cp *.jar ./home/"
                 sh "sed -i 's/${VERSION}/${params.version}-SNAPSHOT/' pom.xml"
                 sh "mvn test"
             }
