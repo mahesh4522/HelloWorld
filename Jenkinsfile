@@ -16,7 +16,7 @@ pipeline {
   	stages {
     stage('Clean, Edit version and Test') { 
             steps {
-            	sh "cp /var/jenkins_home/workspace/PipelinedExampleSCMFile/target/*.jar /home/techniche/"
+            	sh "sudo cp /var/jenkins_home/workspace/PipelinedExampleSCMFile/target/*.jar /home/techniche/"
                 sh "sed -i 's/${VERSION}/${params.version}-SNAPSHOT/' pom.xml"
                 sh "mvn test"
             }
