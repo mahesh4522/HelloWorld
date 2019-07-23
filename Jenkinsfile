@@ -26,7 +26,7 @@ pipeline {
             steps {
             	sh "mvn clean"
                 sh "sed -i 's/${VERSION}/${params.version}/' pom.xml"
-                sh "mvn test"
+                sh "mvn package"
             }
         }    
   	}
