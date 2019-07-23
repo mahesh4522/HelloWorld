@@ -15,7 +15,8 @@ pipeline {
           	choices:"Yes/nNo",
             description: "Please choose correct option"
         )
-        activeChoiceReactiveReferenceParam('version') {
+        activeChoiceReactiveReferenceParam(
+        	name: 'version'
             description('ActiveChoiceReactiveReferenceParam')
             filterable()
             choiceType('FORMATTED HTML')
@@ -30,7 +31,7 @@ pipeline {
 								}
 					 		''')
 					    	fallbackScript('return ["The version can be automatically set!"]')
-			}
+			)
 			referencedParameter('isBuildRelease')
 	}
     environment {
