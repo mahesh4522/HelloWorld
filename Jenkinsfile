@@ -12,7 +12,7 @@ pipeline {
         )
         choice(
        		name: 'isBuildRelease',
-          	choices:"Yes/nNo",
+          	choices:'Yes/nNo',
             description: "Please choose correct option"
         )
 	}
