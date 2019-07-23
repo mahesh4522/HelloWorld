@@ -17,7 +17,7 @@ pipeline {
         )
         activeChoiceReactiveReferenceParam(
         	name: 'version'
-            description('ActiveChoiceReactiveReferenceParam')
+            description : "ActiveChoiceReactiveReferenceParam"
             filterable()
             choiceType('FORMATTED HTML')
             groovyScript {
