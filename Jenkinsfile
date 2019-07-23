@@ -3,7 +3,6 @@ pipeline {
  	tools {
         maven 'Maven'
     }
-   
     environment {
     //Use Pipeline Utility Steps plugin to read information from pom.xml into env variables
     pom = readMavenPom file: 'pom.xml'
