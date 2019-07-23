@@ -3,21 +3,7 @@ pipeline {
  	tools {
         maven 'Maven'
     }
-   parameters {
-            choice(
-                name: 'isBuildRelease',
-                choices:"Yes\nNo",
-                description: "Choose Build Type!")
-            if(params.isBuilRelease){
-               string(
-                name: 'version',
-                defaultValue:"",
-                description: "Input for version number!")
-               }
-               else{
-                return ""
-               }
-    }
+   
     environment {
     //Use Pipeline Utility Steps plugin to read information from pom.xml into env variables
     pom = readMavenPom file: 'pom.xml'
