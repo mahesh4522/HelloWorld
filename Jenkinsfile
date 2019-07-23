@@ -22,7 +22,7 @@ pipeline {
             groovyScript {
                 			script('''
 		 						if (isBuildRelease.equals("Yes")) {
-									html='''<input type="text" id = "version" name="value">'''
+									html=<input type="text" id = "version" name="value">
 									return html
 								} 
 								else{
