@@ -17,11 +17,11 @@ pipeline {
         )
         activeChoiceReactiveReferenceParam(
         	name: 'version'
-            description : "ActiveChoiceReactiveReferenceParam"
+            description : 'ActiveChoiceReactiveReferenceParam'
             filterable()
             choiceType('FORMATTED HTML')
             groovyScript {
-                			script('''
+                			script(
 		 						if (isBuildRelease.equals("Yes")) {
 									html=<input type="text" id = "version" name="value">
 									return html
@@ -29,7 +29,8 @@ pipeline {
 								else{
 									return "<b>The version can be automatically set</b>"
 								}
-					 		''')
+					 		)
+			}
 					    	fallbackScript('return ["The version can be automatically set!"]')
 			)
 			referencedParameter('isBuildRelease')
