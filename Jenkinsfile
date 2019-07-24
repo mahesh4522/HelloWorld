@@ -25,7 +25,7 @@ pipeline {
   	stages {
     	stage('Clean, Edit version and Test') { 
             steps {
-            	newVersion = ${params.version}
+            	sh "newVersion = ${params.version}"
             	sh "mvn clean"
                 sh "sed -i 's/${VERSION}/${newVersion}/' pom.xml"
                 sh "mvn package"
