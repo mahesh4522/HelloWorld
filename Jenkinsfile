@@ -20,11 +20,12 @@ pipeline {
     	//Use Pipeline Utility Steps plugin to read information from pom.xml into env variables
     	pom = readMavenPom file: 'pom.xml'
     	VERSION = pom.getVersion()
-    	newVersion = ${params.version}
+    	
     }
   	stages {
     	stage('Clean, Edit version and Test') { 
             steps {
+            	newVersion = ${params.version}
             	sh "mvn clean"
                 sh "sed -i 's/${VERSION}/${newVersion}/' pom.xml"
                 sh "mvn package"
